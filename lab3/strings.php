@@ -32,8 +32,13 @@ $passIsValid = isDifficultPass($password) ? 'Сложный пароль' : 'У�
 $name = mb_convert_case($name, MB_CASE_TITLE, 'UTF-8');
 $emailValid = filter_var($email, FILTER_VALIDATE_EMAIL) ? 'email корректный' : 'email некорректный';
 
-echo htmlspecialchars($code);
-
 ?>
+
+<p>Логин: <?= $login ?></p>
+<p>Проверка пароля: <?= $passIsValid ?></p>
+<p>Имя: <?= $name ?></p>
+<p>Email: <?= $emailValid ?></p>
+<p>Code: <?= htmlspecialchars($code) ?></p>
+
 </body>
 </html>
