@@ -8,6 +8,7 @@ $email = 'ivan@petrov.ru';
 $code = '<?=$login?>'
 	
 ?>
+
 <!doctype html>
 <html>
 <head>
