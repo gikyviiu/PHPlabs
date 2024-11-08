@@ -4,7 +4,9 @@ include('inc/data.inc.php');
 
 // Инициализация заголовков страницы
 $title = 'Сайт нашей школы';
+ob_start();//перенаправим вывод в буфер, потом его очистим
 include('/home/f1041946/domains/f1041946.xsph.ru/public_html/lab3/date.php');
+ob_end_clean();
 $header = "$welcome, Гость!";
 $id = strtolower(strip_tags(trim($_GET['id'] ?? '')));
 switch ($id) {
