@@ -26,8 +26,8 @@ declare(strict_types=1);
     
     swap($a, $b);
     
-    echo '$a = ' . $a . "\n"; 
-    echo '$b = ' . $b . "\n"; 
+    echo 'Начальное а=5, новое: a = ' . $a . "\n"; 
+    echo 'Начальное b=8, новое: b = ' . $b . "\n"; 
     ?>
 </body>
 
