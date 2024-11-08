@@ -13,11 +13,11 @@ function getMenu(array $menu, bool $vertical = true): void
 }
 
 $leftMenu = [
-    ['link' => 'Home', 'href' => 'index.php'],
-    ['link' => 'Contact', 'href' => 'contact.php'],
-    ['link' => 'About', 'href' => 'about.php'],
-    ['link' => 'Project', 'href' => 'project.php'],
-    ['link' => 'Map', 'href' => 'map.php']
+    ['link' => 'Домой', 'href' => 'index.php'],
+    ['link' => 'О нас', 'href' => 'about.php'],
+    ['link' => 'Контакты', 'href' => 'contact.php'],
+    ['link' => 'Таблица умножения', 'href' => 'table.php'],
+    ['link' => 'Калькулятор', 'href' => 'calc.php'],
 ];
 	/*
 	ЗАДАНИЕ 1
