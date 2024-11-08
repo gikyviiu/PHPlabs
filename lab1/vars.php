@@ -39,7 +39,7 @@ $age = 20;
 	echo "Мне $age лет<br>";
 
 
-	echo "Тип переменной name: ";
+	echo "<br>Тип переменной name: ";
 	var_dump($name);
 	echo "<br>Тип переменной age: ";
 	var_dump($age);
