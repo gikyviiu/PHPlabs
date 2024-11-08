@@ -3,7 +3,7 @@
 ЗАДАНИЕ 1
 - Создайте константу и присвойте ей значение.
 */
-define(constant_name: "e", value: "≈ 2,718");
+define("e","≈ 2,718");
 
 ?>
 <!DOCTYPE html>
@@ -23,8 +23,8 @@ define(constant_name: "e", value: "≈ 2,718");
 	- Выведите значение созданной константы.
     */
 
-    if (defined(constant_name: "constanta"))
-		echo "Константа существует: " . constanta . "<br>";
+    if (defined("e"))
+		echo "Константа существует: " . e . "<br>";
 	 else 
 		echo "Константа не найдена.<br>";
 	

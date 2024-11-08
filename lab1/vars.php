@@ -40,9 +40,9 @@ $age = 20;
 
 
 	echo "<br>Тип переменной name: ";
-	var_dump(value: $name);
+	var_dump( $name);
 	echo "<br>Тип переменной age: ";
-	var_dump(value: $age);
+	var_dump($age);
 
 
 	unset($name, $age);
