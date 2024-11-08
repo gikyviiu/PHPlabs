@@ -2,7 +2,6 @@
 include('inc/lib.inc.php');
 include('inc/data.inc.php');
 
-// Инициализация заголовков страницы
 $title = 'Сайт нашей школы';
 ob_start();
 include('/home/f1041946/domains/f1041946.xsph.ru/public_html/lab3/date.php');
