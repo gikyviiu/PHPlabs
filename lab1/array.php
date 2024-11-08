@@ -1,6 +1,4 @@
 <?php
-//ЗАДАНИЕ 1
-//массивы bmw, toyota, opel
 $bmw = [
     'model' => "x5",
 	'speed, km/h' => 120, 
@@ -33,10 +31,6 @@ $opel = [
 <body>
 	<h1>Массивы</h1>
 	<?php
-	/*
-	ЗАДАНИЕ 2
-	- С помощью подстановки в строку выведите значения всех трёх массивов в виде: name - model - speed - doors -year,  например: bmw - x5 - 120 - 5 - 2006
-	*/
     echo "BMW - {$bmw['model']} - {$bmw['speed, km/h']} - {$bmw['doors']} - {$bmw['year']}<br>";
 	echo "Toyota - {$toyota['model']} - {$toyota['speed, km/h']} - {$toyota['doors']} - {$toyota['year']}<br>";
 	echo "Opel - {$opel['model']} - {$opel['speed, km/h']} - {$opel['doors']} - {$opel['year']}<br>";
