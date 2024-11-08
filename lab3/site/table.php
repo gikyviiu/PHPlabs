@@ -42,6 +42,11 @@
     </form>
     <br>
     <!-- Таблица -->
+    <?php include('inc/lib.inc.php');
+    include('inc/data.inc.php');
+    
+    getTable(); 
+    ?>
     <table border='1' width='200'>
       <tr>
         <td>1</td>
