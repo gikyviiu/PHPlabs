@@ -1,7 +1,12 @@
 <?php
 declare(strict_types=1);
 
-
+/**
+ * Summary of getMenu
+ * @param array $menu
+ * @param bool $vertical
+ * @return void
+ */
 function getMenu(array $menu, bool $vertical = true): void
 {
     if($vertical) echo '<ul class="menu">';

@@ -15,7 +15,7 @@ declare(strict_types=1);
 	<?php
     $var = "HELLO";
     $i = 0;
-    while ($i < strlen(string: $var)) {
+    while ($i < strlen(  $var)) {
       echo $var[$i] . "<br>";
       $i++;
     }
