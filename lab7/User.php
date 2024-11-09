@@ -13,17 +13,14 @@ use Classes as C;
 $user1 = new C\User();
 $user1->name = 'user1';
 $user1->login = 'u1login';
-$user1->password = 'u1pass';
 
 $user2 = new C\User();
 $user2->name = 'user2';
 $user2->login = 'u2login';
-$user1->password = 'u2pass';
 
 $user3 = new C\User();
 $user3->name = 'user3';
 $user3->login = 'u3login';
-$user3->password = 'u3pass';
 
 $user1->showInfo();
 $user2->showInfo();
