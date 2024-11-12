@@ -22,17 +22,18 @@ $age = 20;
 <body>
 	<h1>Переменные и вывод</h1>
 
-	<?php
-	echo "Меня зовут: $name<br>";
-	echo "Мне $age лет<br>";
+	<p>Меня зовут: <?=$name ?>
+	<p>Мне <?=$age?> лет
 
 
-	echo "<br>Тип переменной name: ";
-	var_dump( $name);
-	echo "<br>Тип переменной age: ";
-	var_dump($age);
+	<p>Тип переменной name:
+	<?=var_dump($name)?>
+	<p>Тип переменной age: 
+	<?=var_dump($age)?>
 
 
+
+	<?php 
 	unset($name, $age);
 	?>
 </body>
