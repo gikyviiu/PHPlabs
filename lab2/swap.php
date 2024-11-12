@@ -15,6 +15,12 @@ declare(strict_types=1);
 <body>
     <h1>Функция swap</h1>
     <?php
+    /**
+     * Summary of swap
+     * @param mixed $a
+     * @param mixed $b
+     * @return void
+     */
     function swap(&$a, &$b) {
         $temp = $a;
         $a = $b;

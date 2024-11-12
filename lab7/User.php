@@ -1,7 +1,11 @@
 <?php
 declare(strict_types=1);
-// require_once('Classes/User.php');
-// require_once('Classes/SuperUser.php');
+
+/**
+ * Summary of autoLoader
+ * @param mixed $class
+ * @return void
+ */
 function autoLoader($class) {
     $file = str_replace('\\', '/', $class).'.php';
     if (file_exists($file))

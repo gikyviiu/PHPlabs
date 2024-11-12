@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * Summary of getTable
+ * @param int $cols
+ * @param int $rows
+ * @param string $color
+ * @return int
+ */
 function getTable(int $cols = 7, int $rows = 7, string $color = 'orange'): int
 {
 	static $count = 0;

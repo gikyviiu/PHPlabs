@@ -18,6 +18,11 @@ $code = '<?=$login?>'
 <body>
 
 <?php
+/**
+ * *
+ * @param mixed $password
+ * @return bool
+ */
 function isDifficultPass($password){
 	return preg_match('/[A-Z]/', $password) &&
 			preg_match('/[a-z]/', $password) &&
