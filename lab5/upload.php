@@ -1,3 +1,7 @@
+<?php
+declare(strict_types=1);
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,23 +12,47 @@
 </head>
  <body>
   <div>
+
   <?php
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['fupload'])) {
-  echo 'Имя файла: '. $_FILES['fupload']['name'] . '<br>';
-  echo 'Размер файла: '.$_FILES['fupload']['size'] . '<br>';
-  echo 'Имя временного файла: ' . $_FILES['fupload']['tmp_name'] . '<br>';
-  echo 'Тип файла: ' . $_FILES['fupload']['type'] . '<br>';
-  echo 'Код ошибки: ' . $_FILES['fupload']['error'] . '<br>';
-    
-    if (is_uploaded_file($_FILES['fupload']['tmp_name']) && mime_content_type($_FILES['fupload']['tmp_name']) === 'image/jpeg'){
-        $nameImage = 'upload/' . md5($_FILES['fupload']['name']);
-        move_uploaded_file($_FILES['fupload']['tmp_name'], $nameImage);
-  }
+  $file = $_FILES['fupload'];
+
+  
+  echo 'Имя файла: ' . htmlspecialchars($file['name']) . "<br>";
+  echo 'Размер файла: ' . $file['size'] . " байт<br>";
+  echo 'Имя временного файла: ' . htmlspecialchars($file['tmp_name']) . "<br>";
+  echo 'Тип файла: ' . htmlspecialchars($file['type']) . "<br>";
+  echo 'Код ошибки: ' . $file['error'] . "<br>";
+
+  
+  if ($file['error'] === UPLOAD_ERR_OK) {
+      $tempFilePath = $file['tmp_name'];
+
+      
+      if (mime_content_type($tempFilePath) === 'image/jpeg') {
+          
+          $uploadDir = 'upload/';
+          if (!is_dir($uploadDir)) {
+              mkdir($uploadDir, 0777, true);
+          }
+
+          
+          $newFileName = md5_file($tempFilePath) . '.jpg';
+          $uploadFilePath = $uploadDir . $newFileName;
+
+          
+          if (move_uploaded_file($tempFilePath, $uploadFilePath)) {
+              echo 'Файл успешно загружен в директорию: ' . htmlspecialchars($uploadFilePath);
+          } else
+              echo 'Ошибка при перемещении файла.';
+      } else
+          echo 'Неверный тип файла. Загрузите изображение в формате JPEG.';
+
+  } else
+      echo 'Ошибка загрузки файла. Код ошибки: ' . $file['error'];
+
 }
-
-
 ?>
 
 
