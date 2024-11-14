@@ -28,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (isset($_GET['delete_id'])) {
     $delete_id = intval($_GET['delete_id']);
     $query = "DELETE FROM msgs WHERE id = $delete_id";
-    if (mysqli_query($conn, $query)) {
+    if (mysqli_query($connection, $query)) {
         header("Location: ".$_SERVER['PHP_SELF']);
         exit();
     } 
     else
-        echo "Error deleting record: ".mysqli_error($conn);
+        echo "Error deleting record: ".mysqli_error($connection);
 }
 ?>
 
@@ -62,7 +62,7 @@ if (isset($_GET['delete_id'])) {
 
 <?php
 $query = "SELECT * FROM msgs ORDER BY id DESC";
-$result = mysqli_query($conn, $query);
+$result = mysqli_query($connection, $query);
 $row_count = mysqli_num_rows($result);
 echo "<p>Записей в гостевой книге: $row_count</p>";
 if ($row_count > 0) {
@@ -78,7 +78,7 @@ if ($row_count > 0) {
 else
     echo "<p>Пока сообщений нет</p>";
     
-mysqli_close($conn);
+mysqli_close($connection);
 ?>
 </body>
 </html>
